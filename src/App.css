@@ -1,0 +1,96 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(154, 112, 238, 0.1);
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--color-pink));
+  transform: scale(1.05);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(154, 112, 238, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(154, 112, 238, 0.15);
+}
+
+.read-the-docs {
+  color: var(--color-teal);
+  font-weight: 500;
+}
+
+/* Brand-specific utility classes */
+.text-lilac {
+  color: var(--color-lilac);
+}
+
+.text-pink {
+  color: var(--color-pink);
+}
+
+.text-teal {
+  color: var(--color-teal);
+}
+
+.text-mint {
+  color: var(--color-mint);
+}
+
+.text-yellow {
+  color: var(--color-yellow);
+}
+
+.bg-lilac {
+  background-color: var(--color-lilac);
+}
+
+.bg-pink {
+  background-color: var(--color-pink);
+}
+
+.bg-teal {
+  background-color: var(--color-teal);
+}
+
+.bg-mint {
+  background-color: var(--color-mint);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
