@@ -2,19 +2,19 @@ import { Project } from '../types/project';
 
 export const projects: Project[] = [
   {
-    id: 'project-1',
-    title: 'Sample Project 1',
-    description: 'A wonderful project created by Maddy and Emmy',
-    imageUrl: '/placeholder-1.jpg',
+    id: 'carrot-jump',
+    title: 'Carrot Jump',
+    description: 'A fun and engaging game where you jump over obstacles to collect carrots',
+    imageUrl: '/src/assets/project-screenshots/carrot-jump-1.png',
+    projectUrl: 'https://carrot-jump.maddyemmylabs.dev',
+    tags: ['Game', 'JavaScript', 'Fun']
+  },
+  {
+    id: 'coming-soon',
+    title: 'Coming Soon!',
+    description: 'This project is currently under development. Check back soon for updates!',
+    imageUrl: '/src/assets/upcoming-project.jpg',
     projectUrl: 'https://project1.maddyemmylabs.dev',
     tags: ['React', 'TypeScript', 'Fun']
   },
-  {
-    id: 'project-2',
-    title: 'Sample Project 2',
-    description: 'Another amazing project from the Labs',
-    imageUrl: '/placeholder-2.jpg',
-    projectUrl: 'https://project2.maddyemmylabs.dev',
-    tags: ['Vue', 'JavaScript', 'Creative']
-  }
 ]; 

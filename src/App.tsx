@@ -57,7 +57,7 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          A collection of creative projects by Maddy, Emmy, and their dad
+          A collection of creative projects by Maddy, Emmy, and their dad!
         </Subtitle>
       </Header>
       <ProjectsGrid>
