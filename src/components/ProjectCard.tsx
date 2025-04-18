@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
 import { ProjectCardProps } from '../types/project';
 
-const Card = styled(motion.a)`
+const Card = styled(motion.div)`
   display: block;
   background: white;
   border-radius: 12px;
@@ -64,27 +64,48 @@ const Tag = styled.span`
   color: #555;
 `;
 
+const RepoLink = styled.a`
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <Card
-      href={project.projectUrl}
-      target="_blank"
-      rel="noopener noreferrer"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <ImageContainer>
-        <ProjectImage src={project.imageUrl} alt={project.title} />
+        <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" aria-label={`Launch project ${project.title}`}>
+           <ProjectImage src={project.imageUrl} alt={project.title} />
+        </a>
       </ImageContainer>
       <Content>
-        <Title>{project.title}</Title>
+        <Title>
+          <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            {project.title}
+          </a>
+        </Title>
         <Description>{project.description}</Description>
         <Tags>
           {project.tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>
           ))}
         </Tags>
+        {project.repoUrl && (
+          <RepoLink href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+            View Source Code
+          </RepoLink>
+        )}
       </Content>
     </Card>
   );
